@@ -1,0 +1,35 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2.3.1
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /txrunn.github.io
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages  # The branch the action should deploy to.
+        FOLDER: out  # The folder the action should deploy.
+        BASE_BRANCH: main  # The branch the action should use for extracting commits to work with.
+        CLEAN: true  # Automatically remove deleted files from the deploy branch
+        COMMIT_MESSAGE: "Deployed Next.js to GitHub Pages"

@@ -10,5 +10,5 @@ module.exports = {
             '/contact': { page: '/contact' },
         };
     },
-    assetPrefix: '/txrunn.github.io/',
+    basePath: '/txrunn.github.io',
 };

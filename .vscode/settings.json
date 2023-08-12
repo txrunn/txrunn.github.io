@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/rune/Development/txrunn.github.io/.github/workflows/deploy.yml"
-    }
-}

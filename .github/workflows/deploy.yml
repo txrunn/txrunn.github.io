@@ -19,17 +19,17 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build
-      run: npm run build
+    - name: Build and Export
+      run: |
+        npx next build
+        npx next export
       env:
         NEXT_PUBLIC_BASE_PATH: /txrunn.github.io
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages  # The branch the action should deploy to.
-        FOLDER: out  # The folder the action should deploy.
-        BASE_BRANCH: main  # The branch the action should use for extracting commits to work with.
-        CLEAN: true  # Automatically remove deleted files from the deploy branch
-        COMMIT_MESSAGE: "Deployed Next.js to GitHub Pages"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages  # The branch the action should deploy to.
+        folder: out  # The folder the action should deploy.
+        clean: true  # Automatically remove deleted files from the deploy branch

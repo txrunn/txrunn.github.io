@@ -1,4 +1,3 @@
-
 {
     "name": "portfolio-next",
     "version": "1.0.0",
@@ -9,9 +8,12 @@
         "deploy": "gh-pages -d out"
     },
     "dependencies": {
+        "autoprefixer": "^10.4.15",
         "next": "latest",
+        "postcss": "^8.4.27",
         "react": "latest",
-        "react-dom": "latest"
+        "react-dom": "latest",
+        "tailwindcss": "^3.3.3"
     },
     "devDependencies": {
         "gh-pages": "latest"

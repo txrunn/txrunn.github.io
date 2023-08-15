@@ -10,5 +10,9 @@ module.exports = {
             '/contact': { page: '/contact' },
         };
     },
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+    },
     basePath: '/txrunn.github.io',
 };

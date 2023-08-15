@@ -1,0 +1,105 @@
+@import 'tailwindcss/base';
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #50b3a2;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    padding: 30px 0;
+}
+
+main h2, main h3 {
+    color: #333;
+}
+
+main p {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #666;
+}
+
+footer {
+    padding: 20px 0;
+    background: #50b3a2;
+    color: white;
+    text-align: center;
+}
+
+section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.job-title {
+    color: #666;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.job-duration {
+    color: #999;
+    font-weight: normal;
+    font-size: 18px;
+}
